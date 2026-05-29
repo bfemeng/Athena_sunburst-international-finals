@@ -41,6 +41,19 @@ photoCards.forEach((card) => {
   });
 });
 
+const music = document.getElementById('bgMusic');
+const button = document.getElementById('music-toggle');
+
+button.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    button.textContent = '⏸ Pause Music';
+  } else {
+    music.pause();
+    button.textContent = '🎵 Play Music';
+  }
+});
+
 function makeConfetti(x, y) {
   const colors = ['#ff1493', '#ff7a00', '#ffd6e8', '#111111', '#ffffff'];
 
